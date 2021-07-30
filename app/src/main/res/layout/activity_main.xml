@@ -4,15 +4,95 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/main_bg_color"
     tools:context=".MainActivity">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/aside"
+        android:layout_width="65dp"
+        android:layout_height="0dp"
+        android:background="@color/aside_bg_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:id="@+id/main_scene"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/main_scene_text"
+            android:layout_marginBottom="100dp"
+            android:rotation="270"
+            android:gravity="center"
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/about"/>
+        <TextView
+            android:id="@+id/about"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/about_text"
+            android:layout_marginBottom="100dp"
+            android:rotation="270"
+            android:gravity="center"
+            android:fontFamily="@font/montserrat"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/contacts"/>
+        <TextView
+            android:id="@+id/contacts"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/contacts_text"
+            android:layout_marginBottom="120dp"
+            android:rotation="270"
+            android:gravity="center"
+            android:fontFamily="@font/montserrat"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/iv_hot_deal"/>
+        <ImageView
+            android:id="@+id/iv_hot_deal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_hot_deal"
+            android:contentDescription="@string/sales_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="20dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
     <TextView
+        android:id="@+id/tv_logo_app_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="@string/logo_of_app_1"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        android:fontFamily="@font/montserrat"
+        android:layout_marginStart="40dp"
+        app:layout_constraintStart_toEndOf="@id/aside"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="60dp"/>
+    <TextView
+        android:id="@+id/tv_logo_app_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/logo_of_app_2"
+        android:textColor="@color/name_of_app"
+        android:textSize="40sp"
+        android:fontFamily="@font/montserrat_bold"
+        app:layout_constraintStart_toEndOf="@id/tv_logo_app_1"
+        app:layout_constraintTop_toTopOf="@id/tv_logo_app_1"/>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
