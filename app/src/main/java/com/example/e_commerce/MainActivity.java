@@ -37,8 +37,8 @@ import java.util.List;
 
         List<Course>  courseList = new ArrayList<>();
 
-        courseList.add(new Course(1, "java","Профессия разработчик Java","1 января", "низкий", "#424345"));
-        courseList.add(new Course(1, "python","Профессия разработчик Python","10 января", "низкий", "#9FA52D"));
+        courseList.add(new Course(1, "java","Профессия разработчик Java","1 января", "низкий", "#424345","test"));
+        courseList.add(new Course(1, "python","Профессия разработчик Python","10 января", "низкий", "#9FA52D","test"));
 
         setCourseRecycler(courseList);
     }
