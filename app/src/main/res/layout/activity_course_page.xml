@@ -182,6 +182,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:background="@android:color/transparent"
+        android:onClick="addToCard"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/aside"
         app:layout_constraintTop_toBottomOf="@+id/tv_course_page_text"
